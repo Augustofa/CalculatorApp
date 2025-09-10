@@ -174,10 +174,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setDisplayedValue(value : String) {
-        if(value.length >= 10){
+        if(value.toDouble() > 1e9){
             resultView.text = "TOO BIG"
         }else{
-            resultView.text = value
+            if(value.length >= 10){
+                resultView.text = value.substring(0, 9)
+            }else{
+               resultView.text = value
+            }
         }
     }
 }
