@@ -7,13 +7,73 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_blue">
+
+        <LinearLayout
+            android:id="@+id/resultDisplay"
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:background="@drawable/box"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:flow_horizontalAlign="end"
+            >
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="textEnd"
+                android:textSize="60sp"
+                android:hint="@string/_0"
+                />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="360dp"
+            android:layout_height="500dp"
+            android:rowCount="5"
+            android:columnCount="4"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toBottomOf="@id/resultDisplay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <Button android:id="@+id/clearBtn" style="@style/calcButton" android:text="C" android:backgroundTint="#7294fc"/>
+            <Button android:id="@+id/eraseBtn" style="@style/calcButton" android:text="\u232B" android:backgroundTint="#7a524d"/>
+            <Button android:id="@+id/moduloBtn" style="@style/calcButton" android:text="%" android:backgroundTint="@color/green"/>
+            <Button android:id="@+id/divideBtn" style="@style/calcButton" android:text="/" android:backgroundTint="@color/green"/>
+
+            <Button android:id="@+id/btn7" style="@style/calcButton" android:text="7"/>
+            <Button android:id="@+id/btn8" style="@style/calcButton" android:text="8"/>
+            <Button android:id="@+id/btn9" style="@style/calcButton" android:text="9"/>
+            <Button android:id="@+id/multiplyBtn" style="@style/calcButton" android:text="*" android:backgroundTint="@color/green"/>
+
+            <Button android:id="@+id/btn4" style="@style/calcButton" android:text="4"/>
+            <Button android:id="@+id/btn5" style="@style/calcButton" android:text="5"/>
+            <Button android:id="@+id/btn6" style="@style/calcButton" android:text="6"/>
+            <Button android:id="@+id/minusBtn" style="@style/calcButton" android:text="-" android:backgroundTint="@color/green"/>
+
+            <Button android:id="@+id/btn1" style="@style/calcButton" android:text="1"/>
+            <Button android:id="@+id/btn2" style="@style/calcButton" android:text="2"/>
+            <Button android:id="@+id/btn3" style="@style/calcButton" android:text="3"/>
+            <Button android:id="@+id/sumBtn" style="@style/calcButton" android:text="+" android:backgroundTint="@color/green"/>
+
+            <Button style="@style/calcButton" android:textSize="34sp" android:text="x\u00B2"/>
+            <Button android:id="@+id/btn0" style="@style/calcButton" android:text="0"/>
+            <Button android:id="@+id/pointBtn" style="@style/calcButton" android:text="."/>
+            <Button android:id="@+id/equalsBtn" style="@style/calcButton" android:text="=" android:backgroundTint="#ad7334"/>
+
+
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
