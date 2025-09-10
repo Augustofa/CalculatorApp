@@ -25,13 +25,15 @@
             >
 
             <TextView
+                android:id="@+id/resultText"
                 android:layout_width="310dp"
                 android:layout_height="80dp"
+                android:textColor="#1f2b33"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:textAlignment="textEnd"
                 android:textSize="60sp"
-                android:hint="@string/_0"
+                android:text="@string/_0"
                 />
         </LinearLayout>
 
@@ -67,9 +69,9 @@
             <Button android:id="@+id/btn3" style="@style/calcButton" android:text="3"/>
             <Button android:id="@+id/sumBtn" style="@style/calcButton" android:text="+" android:backgroundTint="@color/green"/>
 
-            <Button style="@style/calcButton" android:textSize="34sp" android:text="x\u00B2"/>
+            <Button android:id="@+id/squareBtn" style="@style/calcButton" android:textSize="34sp" android:text="x\u00B2" android:backgroundTint="@color/green"/>
             <Button android:id="@+id/btn0" style="@style/calcButton" android:text="0"/>
-            <Button android:id="@+id/pointBtn" style="@style/calcButton" android:text="."/>
+            <Button android:id="@+id/pointBtn" style="@style/calcButton" android:text="." android:backgroundTint="#724dab"/>
             <Button android:id="@+id/equalsBtn" style="@style/calcButton" android:text="=" android:backgroundTint="#ad7334"/>
 
 
